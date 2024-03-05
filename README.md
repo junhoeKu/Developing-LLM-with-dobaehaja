@@ -54,21 +54,19 @@ EDA는 텍스트 데이터의 특성, 분포, 형태 등 데이터의 구조를 
 
 - Skt/kogpt2-base-v2 [from baseline code] : SKT에서 개발한 한국어 gpt2 모델 (125M)
 - 42dot/42dot_LLM-SFT-1.3B : 국내 최고의 한영통합 언어 모델 기반의 경량 생성형 언어모델
-- maywell/Synatra-42dot-1.3B ![image](https://github.com/junhoeKu/Developing-LLM-with-dobaehaja.github.io/assets/144355794/0500d4b4-d408-479b-9b9d-7294efbc7330)
-: 위 모델을 기반으로 Instruction tuning된 Pretrained LLM
+- maywell/Synatra-42dot-1.3B : 위 모델을 기반으로 Instruction tuning된 Pretrained LLM
     -> 다양한 3B 이내 경량 모델로 실험하던 중 GPU 메모리 아웃이 나지 않은 모델
 
-### Training Process
+### Fine Tuning
 
-- Details on the training process, including splitting of data, cross-validation methods used, and evaluation metrics.
+- Prompt : LLM에 instruction을 주어 특정 task에 맞는 적절한 대답을 형성하는 것
+- Fine Tuning : 사전 학습된 모델을 소규모의 데이터 세트에 대해 추가로 학습시켜 특정 작업이나 도메인에서 기능을 개선하고 성능을 향상시키는 프로세스
 
-## Hyper Parameter Modification
+### LoRA
 
-Explanation of the hyperparameter tuning process to optimize model performance.
-
-### Methods Used for Hyperparameter Tuning
-
-- Grid Search, Random Search, Bayesian Optimization, etc.
+- PEFT : 적은 매개변수 학습만으로 빠른 시간에 새로운 문제를 효과적으로 해결하는 Fine-Tuning 기법
+- LoRA : PEFT 방법론 중 하나로, 대부분의 매개변수 가중치는 유지하되 일부만 미세조정하는 방식
+      -> 
 
 ### Impact on Model Performance
 
