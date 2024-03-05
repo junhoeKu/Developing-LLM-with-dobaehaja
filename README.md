@@ -22,8 +22,10 @@
 
 ### Key Findings
 
-- Summary of insights gathered from the data.
-- Visualizations and graphs to support the insights.
+- 질문 2개 / 답변 5개
+- 바이트 수 : 총 600,232개의 바이트
+- 음절 수 : 140,118개의 음절
+- 문장 수 : 총 11,501개의 문장
 
 ## Data Collection
 
