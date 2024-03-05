@@ -13,7 +13,7 @@
 
 ## Exploratory Data Analysis (EDA)
 
-이 섹션에서는 텍스트 데이터의 특성, 분포, 형태 등 데이터의 구조를 파악하는 것을 목표로 합니다.
+EDA는 텍스트 데이터의 특성, 분포, 형태 등 데이터의 구조를 파악하는 것을 목표로 합니다.
 
 ### Tools & Techniques Used
 
@@ -29,36 +29,30 @@
 
 ## Data Collection
 
-Overview of the data collection process, including sources of data, methods used for collecting data, and any challenges faced during this process.
+데이터 수집 부분에서는 Prompt Engineering과 Web Crawling을 통해 진행한 **데이터 수집 프로세스** 내용을 담았습니다.
 
 ### Data Sources
 
-- Description of data sources used in the project.
-
-### Challenges & Solutions
-
-- Any obstacles encountered in data collection and how they were overcome.
+- 논문 및 레퍼런스 자료 Prompt Engineering
+- 키워드 기반 Prompt Engineering
+- 오늘의 집 등과 같은 도메인 사이트 Web Crawling
 
 ## Data Augmentation
 
-Description of the techniques applied to augment the data set. This might include data generation, oversampling underrepresented classes, or synthetic data generation methods.
-
-### Techniques Used
-
-- **Data Generation:** How new data points were created.
-- **Oversampling/Undersampling:** Methods used to balance the dataset.
+데이터 증강 부분에서는 수집한 데이터를 정제, 정교화, 취합 후 검토 작업에 대한 내용을 담았습니다.
 
 ### Impact on Model Performance
 
-- Discussion on how data augmentation improved the model.
+- 단순히 데이터를 늘리는 것만이 정답이 아니라 판단하고 주어진 데이터를 답변에 최적화될 수 있도록 연구했습니다.
+- 어떤 답변이 좋은 답변인지 확신이 없기 때문에 경우의 수를 나눠서 시도했습니다.
 
 ## Modeling
 
-Detailed explanation of the model(s) used, including the reasoning behind model selection, architecture details, and training process.
+모델링 부분에서는 모델 선택의 이유, 아키텍처 세부 사항 및 학습 과정을 포함하여 사용된 모델에 대한 자세한 설명을 담았습니다.
 
 ### Models Considered
 
-- Brief overview of different models considered and why the final model(s) was selected.
+- Skt/kogpt2-base-v2 [from baseline code]
 
 ### Training Process
 
