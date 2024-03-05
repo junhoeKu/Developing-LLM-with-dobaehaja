@@ -52,7 +52,11 @@ EDA는 텍스트 데이터의 특성, 분포, 형태 등 데이터의 구조를 
 
 ### Models Considered
 
-- Skt/kogpt2-base-v2 [from baseline code]
+- Skt/kogpt2-base-v2 [from baseline code] : SKT에서 개발한 한국어 gpt2 모델 (125M)
+- 42dot/42dot_LLM-SFT-1.3B : 국내 최고의 한영통합 언어 모델 기반의 경량 생성형 언어모델
+- maywell/Synatra-42dot-1.3B ![image](https://github.com/junhoeKu/Developing-LLM-with-dobaehaja.github.io/assets/144355794/0500d4b4-d408-479b-9b9d-7294efbc7330)
+: 위 모델을 기반으로 Instruction tuning된 Pretrained LLM
+    -> 다양한 3B 이내 경량 모델로 실험하던 중 GPU 메모리 아웃이 나지 않은 모델
 
 ### Training Process
 
