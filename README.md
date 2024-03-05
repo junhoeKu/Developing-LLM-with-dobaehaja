@@ -66,24 +66,17 @@ EDA는 텍스트 데이터의 특성, 분포, 형태 등 데이터의 구조를 
 
 - PEFT : 적은 매개변수 학습만으로 빠른 시간에 새로운 문제를 효과적으로 해결하는 Fine-Tuning 기법
 - LoRA : PEFT 방법론 중 하나로, 대부분의 매개변수 가중치는 유지하되 일부만 미세조정하는 방식
-      -> 
+      -> 훈련 비용과 컴퓨팅 자원을 절약하면서 성능 향상 기대
 
 ### Impact on Model Performance
 
-- Before and after comparison of model performance metrics to highlight the impact of hyperparameter tuning.
+![KakaoTalk_20240223_012821379](https://github.com/junhoeKu/Developing-LLM-with-dobaehaja.github.io/assets/144355794/0f170bd2-bc33-40c4-ac16-9ca47c7b5455)
 
 ## Conclusion
 
-Summarize the key outcomes of the project, including the final model performance, lessons learned, and potential next steps for future work.
-
-## How to Use
-
-Instructions for others on how to use this project for their own data or as a basis for further exploration.
-
-## Contributing
-
-Guidelines for contributing to this project, if open for contributions.
+1. 아무래도 공모전이라 주최측에서 원하는 답을 찾기가 매우 까다로웠음.(답변을 잘하기 위해서는 기본적으로 대량의 데이터를 학습시키는 것이 맞지만 데이터를 정교하게 하는 것이 더 중요했던..)
+2. 같은 언어모델이라도 학습 방식에 있어 엄청난 차이가 있기 때문에 이 부분을 좀 더 공부해야 겠다고 느낌.
 
 ## License
 
-Specify the license under which the project is released.
+- 아직 미완성
