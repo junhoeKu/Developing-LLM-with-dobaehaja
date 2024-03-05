@@ -1,7 +1,7 @@
 # 도배 하자 질의 응답 처리 : 한솔데코 시즌2 AI 경진대회
 ![image](https://github.com/junhoeKu/Developing-LLM-with-dobaehaja.github.io/assets/144355794/a6c9d84b-d8ef-4a55-bddb-e4a51ff81c46)
 
-A brief description of what this project does and who it's for.
+도배 하자 도메인에 대한 질의를 바탕으로 지능적인 응답을 생성하는 AI 모델 개발입니다.
 
 ## Table of Contents
 
@@ -13,12 +13,12 @@ A brief description of what this project does and who it's for.
 
 ## Exploratory Data Analysis (EDA)
 
-In this section, we dive deep into the dataset to understand its characteristics, anomalies, patterns, and relationships. This step is crucial for preparing the data for effective modeling.
+이 섹션에서는 텍스트 데이터의 특성, 분포, 형태 등 데이터의 구조를 파악하는 것을 목표로 합니다.
 
 ### Tools & Techniques Used
 
-- **Python libraries:** Pandas for data manipulation, Matplotlib and Seaborn for visualization.
-- **Analysis Techniques:** Descriptive statistics, correlation analysis, distribution analysis.
+- **Python libraries:** Pandas, Matplotlib, Seaborn.
+- **Analysis Techniques:** 기술 통계, 상관분석, 유사도 분석.
 
 ### Key Findings
 
