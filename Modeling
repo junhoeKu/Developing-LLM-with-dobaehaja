@@ -1,0 +1,78 @@
+# 데이터 포맷팅 및 토크나이징
+from tqdm import tqdm
+formatted_data = []
+for _, row in tqdm(train_data.iterrows()):
+    # '질문_1'은 항상 존재한다고 가정
+    q_cols = ['질문_1']
+    
+    # '질문_2'가 있으면 리스트에 추가
+    if pd.notnull(row['질문_2']):
+        q_cols.append('질문_2')
+        
+    for q_col in q_cols:
+        for a_col in ['답변_1', '답변_2', '답변_3', '답변_4', '답변_5']:
+            # 질문이나 답변이 비어있지 않은 경우에만 처리
+            if pd.notnull(row[q_col]) and pd.notnull(row[a_col]):
+                input_text = row[q_col] + tokenizer.eos_token + row[a_col]
+                input_ids = tokenizer.encode(input_text, return_tensors='pt')
+                formatted_data.append(input_ids)
+print('Done.')
+
+model.to(device)
+
+# 모델 학습 하이퍼파라미터(Hyperparameter) 세팅
+# 실제 필요에 따라 조정하세요.
+CFG = {
+    'LR' : 2e-5, # Learning Rate
+    'EPOCHS' : 15, # 학습 Epoch
+}
+
+# 모델 학습 설정
+optimizer = AdamW(model.parameters(), lr=CFG['LR'])
+
+model.train()
+
+# 모델 학습
+# 경로는 본인 로컬 환경에 맞춰서 설정
+checkpoint_path = '/'
+
+for epoch in range(0, 15):
+    total_loss = 0
+    progress_bar = tqdm(enumerate(formatted_data), total=len(formatted_data))
+    for batch_idx, inputs in progress_bar:
+        # 데이터를 GPU단으로 이동
+        inputs = inputs.to(device)
+
+        outputs = model(inputs, labels=inputs)
+        loss = outputs.loss
+
+        optimizer.zero_grad()
+        loss.backward()
+        optimizer.step()
+        total_loss += loss.item()
+
+        # 진행률 표시줄에 평균 손실 업데이트
+        progress_bar.set_description(f"Epoch {epoch+1} - Avg Loss: {total_loss / (batch_idx+1):.4f}")
+
+    # 에폭의 평균 손실을 출력
+    print(f"Epoch {epoch+1}/10, Average Loss: {total_loss / len(formatted_data)}")
+
+    if epoch%3 ==0:
+        checkpoint_path = os.path.join(checkpoint_path,f"checkpoint_epoch_{epoch+1}")
+        if not os.path.exists(checkpoint_path):
+          os.makedirs(checkpoint_path)
+        model.save_pretrained(checkpoint_path)
+        tokenizer.save_pretrained(checkpoint_path)
+        print(f"Save checkpoint to {checkpoint_path}")
+
+# 모델 저장
+model.save_pretrained("./maywell")
+tokenizer.save_pretrained("./maywell")
+
+import torch
+import gc
+
+# 사용 완료된 텐서 삭제
+#del inputs, labels, outputs, loss
+gc.collect()  # 가비지 컬렉터 실행
+torch.cuda.empty_cache()  # 캐시된 메모리 정리
