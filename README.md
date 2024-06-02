@@ -1,15 +1,21 @@
 # 도배 하자 질의 응답 처리 : 한솔데코 시즌2 AI 경진대회
 ![image](https://github.com/junhoeKu/Developing-LLM-with-dobaehaja.github.io/assets/144355794/a6c9d84b-d8ef-4a55-bddb-e4a51ff81c46)
 
-도배 하자 도메인에 대한 질의를 바탕으로 지능적인 응답을 생성하는 AI 모델 개발
+## 🎯 1. 프로젝트 소개
+### 🧑‍🤝‍🧑 **팀원**
+- **비타민 12기 : 구준회, 김지원**
+- **비타민 13기 : 박서진, 신진섭, 엄성원**
 
-## Table of Contents
+### 📅 **시기**
+- **2023년 겨울방학**
 
-- [Exploratory Data Analysis (EDA)](#exploratory-data-analysis-eda)
-- [Data Collection](#data-collection)
-- [Data Augmentation](#data-augmentation)
-- [Modeling](#modeling)
-- [Hyper Parameter Modification](#hyper-parameter-modification)
+### 🕹️ **주제**
+- **도배 하자 도메인의 AI 챗봇 생성**
+
+### 🎯 **목표**
+- 도배 하자 도메인의 질문을 이해하고 정확한 답변을 생성하는 언어 모델을 개발합니다.
+- 도배 하자 도메인에 AI 기술을 활용해 자재 관리 및 운용의 향상을 도모합니다.
+- 고객 만족도 향상, 제품 및 서비스 전반에 대한 품질 향상을 기대합니다.
 
 ## Exploratory Data Analysis (EDA)
 
