@@ -1,7 +1,7 @@
 # 도배 하자 질의 응답 처리 : 한솔데코 시즌2 AI 경진대회
 ![image](https://github.com/junhoeKu/Developing-LLM-with-dobaehaja.github.io/assets/144355794/a6c9d84b-d8ef-4a55-bddb-e4a51ff81c46)
 
-도배 하자 도메인에 대한 질의를 바탕으로 지능적인 응답을 생성하는 AI 모델 개발입니다.
+도배 하자 도메인에 대한 질의를 바탕으로 지능적인 응답을 생성하는 AI 모델 개발
 
 ## Table of Contents
 
